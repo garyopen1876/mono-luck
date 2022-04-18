@@ -1,0 +1,18 @@
+.bar {
+  background-color: #02a2ee;
+  color: #ffffff;
+}
+.num_class {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+.disable_class {
+  background: #e5e5e5;
+  border: 1px solid #e0e0e0;
+}
+.input_num_text{
+  justify-content: center;
+}
+.finish_btn{
+  padding: 8px;
+}

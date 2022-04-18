@@ -1,0 +1,57 @@
+.bigbox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.icon{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    color: #01A299;
+    top: 20px;
+}
+.text1{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    top: 20px;
+    font-size: 34px;
+}
+.textbox{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    top: 40px;
+}
+.text2{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 14px;
+    opacity: 60%;
+}
+.text3{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 14px;
+    opacity: 60%;
+}
+.text4{
+    position: relative;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 14px;
+    opacity: 60%;
+}
+.finishbutton2{
+    position: relative;
+    margin: 0 auto;
+    top: 60px;
+    width: 360px;
+}
+@media(max-width:380px){
+    .finishbutton2{
+        width: 85%;
+    }
+}

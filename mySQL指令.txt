@@ -1,0 +1,146 @@
+sudo mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';"
+
+sudo mysql -u root -proot -e"
+   create database mono; 
+   
+   use mono; 
+   
+   create table MEMBERS(
+   id int NOT NULL AUTO_INCREMENT,
+   name varchar(40) NOT NULL,
+   cardId varchar(10) NOT NULL UNIQUE,
+   phone varchar(15) NOT NULL UNIQUE,
+   membership varchar(20) NOT NULL UNIQUE,
+   PRIMARY KEY (id)
+   );
+   
+   create table REGISTRATIONS(
+   id int NOT NULL AUTO_INCREMENT,
+   memberId varchar(15) NOT NULL,
+   priority varchar(10) NOT NULL,
+   PRIMARY KEY (id),
+   FOREIGN KEY(memberId) REFERENCES USERS (memberId)
+   );
+   
+   create table LOCKERS(
+   id int NOT NULL AUTO_INCREMENT,
+   lockerNo varchar(2) NOT NULL UNIQUE,
+   lockerEncoding varchar(20) NOT NULL,
+   memberId varchar(10),
+   PRIMARY KEY (id),
+   FOREIGN KEY(memberId) REFERENCES USERS (memberId)
+   );
+   
+   INSERT INTO MEMBERS (name, cardId, phone)
+   VALUES('王小明','0192836475','0911111111'),
+   ('John Cena','1829384756','0922222222'),  
+   ('Neil Patrick Harris','6152635142','0933333333'),  
+   ('阿巴','5473182736','0944444444'),  
+   ('王力宏','4736281948','0955555555'),  
+   ('蔡依林','3812334567','0966666666'),  
+   ('晨陳','1273647898','0977777777'),  
+   ('大哥哥','8887263789','0988888888'),  
+   ('大姊姊','5377618273','0999999999'),  
+   ('小妹妹','1622346589','0912345678');  
+   
+   INSERT INTO "MEMBERs" (name, "cardId", phone, email)
+   VALUES('王一','0192836435','0911111211','cc12@gmail.com'),
+   ('John Cenfsdfa','1822384756','0922322222','cc32@gmail.com'),  
+   ('Neil Pasdfsick Harris','1152635142','0933433333','cc45@gmail.com'),  
+   ('阿巴八','5473184736','0944445444','cc23@gmail.com'),  
+   ('力宏','4736281548','0955565555','cc76@gmail.com'),  
+   ('依林','3812374567','0966667666','ccdf@gmail.com'),  
+   ('陳','1273623498','0977777877','ccgh@gmail.com'),  
+   ('小哥哥','8856263789','0988988888','ccyt@gmail.com'),  
+   ('小姊姊','5367618273','0999990999','ccee@gmail.com'),  
+   ('大妹妹','1623346589','0912335678','ccpo@gmail.com'),
+   ('王王','0192736435','0911181211','ccdf@gmail.com'),
+   ('ncx Cenfsdfa','7822384756','0972322222','ccbv@gmail.com'),  
+   ('kdjfsl Pasdfsick Harris','7152635142','0933436333','ccv@gmail.com'),  
+   ('阿啊八','7473184736','0944445844','ccrt@gmail.com'),  
+   ('力立','7736281548','0955563555','ccqw@gmail.com'),  
+   ('依一','7812374567','0966637666','cc@gmail.com'),  
+   ('陳爸','7273623498','0977727877','ccas@gmail.com'),  
+   ('小大哥','7856263789','0988981888','ccds@gmail.com'),  
+   ('小大姊','7367618273','0999990399','ccas@gmail.com'),  
+   ('大大妹','7623346589','0912333678','ccwe@gmail.com');
+   exit;
+   "
+  SHELL
+
+INSERT INTO "REGISTRATIONs" ("memberId", priority)
+   VALUES('6','00,33,12'),
+   ('3','05,13,28'),  
+   ('2','07,32'),  
+   ('8','25,17,08'),  
+   ('4','32,21,19'),  
+   ('9','00'),  
+   ('7','13,22,11'),  
+   ('10','30,20'),  
+   ('5','00,10,11'),  
+   ('1','01');  
+
+INSERT INTO "REGISTRATIONs" ("memberId", priority)
+   VALUES('11','07,11,13'), 
+   ('12','05,15,06'), 
+   ('13','03,23,33'), 
+   ('14','07,06,14'), 
+   ('15','08,07'), 
+   ('16','07,08'), 
+   ('17','32'), 
+   ('18','01,31'), 
+   ('19','08,03,01'), 
+   ('20','22'), 
+   ('21','01,08,09'), 
+   ('22','31,33,04'), 
+   ('23','22,07'), 
+   ('24','15,14,09'), 
+   ('25','18,10,21'), 
+   ('26','31,09.15'), 
+   ('27','14,29,18'), 
+   ('28','22,14,23'), 
+   ('29','08'), 
+   ('30','11,23,12');
+
+
+INSERT INTO "LOCKERs" ("lockerNo", "lockerEncoding")
+   VALUES('00','2029'),
+   ('01','1029'),
+   ('02','3029'),
+   ('03','4029'),
+   ('04','5029'),
+   ('05','6029'),
+   ('06','7029'),
+   ('07','12029'),
+   ('08','22029'),
+   ('09','32029'),
+   ('10','42029'),
+   ('11','52029'),
+   ('12','62029'),
+   ('13','72029'),
+   ('14','82029'),
+   ('15','92029'),
+   ('16','552029'),
+   ('17','442029'),
+   ('18','332029'),
+   ('19','222029'),
+   ('20','112029'),
+   ('21','9912029'),
+   ('22','042029'),
+   ('23','872029'),
+   ('24','992029'),
+   ('25','7772029'),
+   ('26','6662029'),
+   ('27','3212029'),
+   ('28','1232029'),
+   ('29','4562029'),
+   ('30','7892029'),
+   ('31','4322029'),
+   ('32','123332029'),
+   ('33','5482029');
+
+UPDATE "LOCKERs" SET "memberId" = null,"createdAt" = null,"updatedAt" = null;
+
+SELECT * FROM "REGISTRATIONs" where "memberId" not in (select "memberId" from "LOCKERs")
+
+ALTER TABLE "LOCKERs" ADD COLUMN  "unlockEncoding" VARCHAR(50);

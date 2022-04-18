@@ -1,0 +1,39 @@
+.barlogo{
+    position: relative;
+    left: 16px;
+    top: 10px;
+}
+.bartext1{
+    position: relative;
+    left: 16px;
+    top: 10px;
+}
+.bartext2{
+    position: relative;
+    left: 16px;
+    opacity: 60%;
+    top: 10px;
+}
+.barbutton1{
+    position: relative;
+    width: 300px;
+    top: 15px;
+}
+.barbutton1:hover{
+    background-color: #E1F4FD;
+}
+.barbutton2{
+    position: relative;
+    width: 304px;
+    top: 10px;
+    font-size: 14px;
+}
+.barbutton2:hover{
+    background-color: #E1F4FD;
+    color: #02A2EE;
+}
+.bar {
+    background-color: #02a2ee;
+    color: #ffffff;
+    width: 100vw;
+}

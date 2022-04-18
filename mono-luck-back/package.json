@@ -1,0 +1,36 @@
+{
+  "name": "mono-luck-back",
+  "version": "1.0.0",
+  "description": "mono-luck-back",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joe-lin-ezra/mono-luck-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joe-lin-ezra/mono-luck-back/issues"
+  },
+  "homepage": "https://github.com/Joe-lin-ezra/mono-luck-back#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.17.0",
+    "sequelize-cli": "^6.4.1",
+    "xlsx": "^0.18.3"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  }
+}

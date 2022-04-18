@@ -1,0 +1,106 @@
+.bigbox1 {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+.bigbox2{
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.num_class {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+.disable_class {
+  background: #9b9a9a;
+  border: 1px solid #e0e0e0;
+}
+.input_num_text {
+  justify-content: center;
+}
+.finish_btn {
+  padding: 8px;
+}
+.Text1 {
+  position: relative;
+  top: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 60%;
+  width: 80%;
+  margin: 0 auto;
+}
+.choose {
+  position: relative;
+  width: fit-content;
+  height: 50px;
+  top: 25px;
+}
+.buttongroup {
+  position: relative;
+  display: flexbox;
+  width: 75%;
+  height: fit-content;
+  top: 30px;
+  margin: 0 auto;
+}@media(max-width:380px){
+  .buttongroup{
+
+    width: fit-content;
+  }
+  .choose{
+    font-size: small;
+  }
+}
+.Textchoose {
+  position: relative;
+  width: fit-content;
+  padding-top: 10px;
+  font-weight: 700;
+  opacity: 60%;
+}
+.phonenumber {
+  position: relative;
+  width: 85%;
+  top: 30px;
+  margin: 0 auto;
+}
+.rules {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  top: 30px;
+  left: 15px;
+}
+.checkbox {
+  display: inline-block;
+  position: relative;
+}
+.buttonsend {
+  position: relative;
+  width: 85%;
+  top: 40px;
+  margin: 0 auto;
+  padding:15px;
+}
+.group {
+  position: relative;
+  margin-top: 10px;
+}
+.dialog {
+  text-align: center;
+}
+.divider1 {
+  position: relative;
+  width: 90%;
+  top: 25px;
+  margin: 0 auto;
+}
+.divider2 {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  top: 15px;
+}
